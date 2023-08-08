@@ -6,12 +6,24 @@
 -->
 <html>
 	<head>
-		<title>LuisLovePang</title>
+		<title>LLP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		#grad1 {
+			height: 200px;
+			background-color: red; /* 浏览器不支持时显示 */
+			background-image: linear-gradient(#e66465, #9198e5);
+		}
+		</style>
 	</head>
+	<script>
+	function displayText() {
+	  document.getElementById("myText").innerHTML = "LuisLovesPang";
+	}
+	</script>
 	<body class="is-preload">
 		<h1>Hello 大家好</h1>
 		<h2>我是luismemeda，这是我的个人网站。 </h2>
@@ -20,5 +32,7 @@
 		<ul>
 		  <li> <a href="https://luismemeda.github.io/birthday">知乎</a> </li>
 		</ul>
+		<div id="myText"></div>
+		<div id="grad1"><button style="border: none;" id="myButton" onclick="displayText()" >PS：标题为啥是LLP捏？点我告诉你！</button></div>
 	</body>
 </html>
