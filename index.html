@@ -13,9 +13,14 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 		#grad1 {
-			height: 200px;
+			height: 1000px;
 			background-color: red; /* 浏览器不支持时显示 */
 			background-image: linear-gradient(#e66465, #9198e5);
+		}
+		#mybutton{
+			background:transparent;	/*按钮背景透明*/
+			border-width:0px;	/*边框透明*/
+			outline:none;	/*点击后没边框*/
 		}
 		</style>
 	</head>
@@ -25,14 +30,16 @@
 	}
 	</script>
 	<body class="is-preload">
-		<h1>Hello 大家好</h1>
-		<h2>我是luismemeda，这是我的个人网站。 </h2>
-		<h3>很高兴你来到这里, 你可以在以下的网站找到我</h3>
+		<div id="grad1">
+			<h1>Hello 大家好</h1>
+			<h2>我是luismemeda，这是我的个人网站。 </h2>
+			<h3>很高兴你来到这里, 你可以在以下的网站找到我</h3>
 
-		<ul>
-		  <li> <a href="https://luismemeda.github.io/birthday">知乎</a> </li>
-		</ul>
-		<div id="myText"></div>
-		<div id="grad1"><button style="border: none;" id="myButton" onclick="displayText()" >PS：标题为啥是LLP捏？点我告诉你！</button></div>
+			<ul>
+			  <li> <a href="https://luismemeda.github.io/birthday">知乎</a> </li>
+			</ul>
+			<div id="myText"></div>
+			<button id="mybutton" style="border: none;" id="myButton" onclick="displayText()" >PS：标题为啥是LLP捏？点我告诉你！</button>
+		</div>
 	</body>
 </html>
