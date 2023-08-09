@@ -12,15 +12,54 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-		#grad1 {
+		#grad1{
 			height: 1000px;
 			background-color: red; /* 浏览器不支持时显示 */
-			background-image: linear-gradient(#e66465, #9198e5);
+			/*background-image: linear-gradient(to top right, #e66465 40%, #9198e5);*/
+			background-image: linear-gradient(to top right, #a8edea, #fed6e3);
 		}
 		#mybutton{
 			background:transparent;	/*按钮背景透明*/
 			border-width:0px;	/*边框透明*/
 			outline:none;	/*点击后没边框*/
+		}
+		.colorful{
+			/*width: 250px;
+			font-size: 30px;*/
+			background-image: 
+			-webkit-gradient( linear, left top, right top, color-stop(0, #f22), 
+			color-stop(0.15, #f2f), 
+			color-stop(0.3, #22f), 
+			color-stop(0.45, #2ff), 
+			color-stop(0.6, #2f2),
+			color-stop(0.75, #2f2), 
+			color-stop(0.9, #ff2), 
+			color-stop(1, #f22) );
+			color: transparent;
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			-ms-background-clip: text
+		}
+		.text{
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			margin-left: -150px;
+			background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #00FFFF 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			-webkit-background-size: 200% 100%; 
+			-webkit-animation: masked-animation 4s linear infinite;
+			font-size: 35px;
+		}
+		@keyframes masked-animation {
+			0% {
+				background-position: 0  0;
+			}
+			100% {
+				background-position: -100%  0;
+			}
 		}
 		</style>
 	</head>
@@ -32,14 +71,14 @@
 	<body class="is-preload">
 		<div id="grad1">
 			<h1>Hello 大家好</h1>
-			<h2>我是luismemeda，这是我的个人网站。 </h2>
-			<h3>很高兴你来到这里, 你可以在以下的网站找到我</h3>
+			<h2 class="colorful">我是luismemeda，这是我的个人网站。 </h2>
+			<h3 class="colorful">很高兴你来到这里, 你可以在以下的网站找到我</h3>
 
 			<ul>
 			  <li> <a href="https://luismemeda.github.io/birthday">知乎</a> </li>
 			</ul>
-			<div id="myText"></div>
-			<button id="mybutton" style="border: none;" id="myButton" onclick="displayText()" >PS：标题为啥是LLP捏？点我告诉你！</button>
+			<button id="mybutton" style="border: none;" class="myButton" onclick="displayText()">PS：标题为啥是LLP捏？点我告诉你！</button>
+			<div class="text" id="myText"></div>
 		</div>
 	</body>
 </html>
