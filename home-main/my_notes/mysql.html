@@ -44,7 +44,26 @@
         <div class="big-title"></div>
         <div class="description">一些MySQL的使用方法及技巧。俗话说“好记性不如烂笔头”，记下来学而时习之，以防遗忘。</div>
         <div class="welcome-img"></div>
-        <h2 id="idvqw" class="c2368">1.限制结果条目——limit<br /><span id="i87wi" class="c2542">select * from temp limit 3,4 order by ...;（从第四行开始取四行结果）</span><br /><br /></h2>
+        <h2 id="idvqw" class="c2368">1.限制结果条目——limit<br /><span id="i87wi" class="c2542">select * from temp limit 3,4 order by ...;<br>
+          --从第四行开始取四行结果</span><br /><br /></h2>
+        <h2 id="idvqw" class="c2368">2.递归CTE（公共表表达式）<br /><span id="i87wi" class="c2542">with recursive temp as (<br>
+			select
+				1 as id1,
+				1 as value<br>
+			union all<br>
+			select
+				id1 + 1 as id111,
+				id1
+			from
+				temp
+			where
+				id1 < 1000)<br>
+			select
+				*
+			from
+				temp;<br>
+			--从1开始生成1000个递增行
+	</span><br /><br /></h2>
         <div class="description"></div>
         <div class="wechat-group"></div>
         <div class="description">© 2023 Luis 版权所有</div>
